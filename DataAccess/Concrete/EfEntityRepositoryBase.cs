@@ -13,7 +13,7 @@ namespace DataAccess.Concrete
     public class EfEntityRepositoryBase<TEntity> : IRepositoryBase<TEntity>
         where TEntity : class, IEntity, new()
     {
-        private readonly DbContext _context;
+        protected readonly DbContext _context;
         public EfEntityRepositoryBase(DbContext context)
         {
             _context = context;
